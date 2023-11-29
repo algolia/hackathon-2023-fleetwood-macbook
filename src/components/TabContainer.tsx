@@ -23,6 +23,7 @@ export function TabContainer({ tabs, defaultTabId }: TabContainerProps) {
           const TabIcon = tab.icon;
           return (
             <Tabs.Trigger
+              key={tab.id}
               value={tab.id}
               className="flex flex-col border bg-gradient-to-b from-[#DFDFDF] to-90% px-8 transition-colors first-of-type:rounded-tl-lg last-of-type:rounded-tr-lg items-center group hover:bg-gray-100 space-y-2 p-4 text-sm data-[state=active]:border-b-2 data-[state=active]:border-b-blue-600 group-data-[state=active]"
             >
@@ -35,13 +36,13 @@ export function TabContainer({ tabs, defaultTabId }: TabContainerProps) {
           );
         })}
       </Tabs.List>
-      <div className="flex flex-col min-h-[500px] bg-white">
-        {tabs.map((tab) => (
-          <Tabs.Content key={tab.id} value={tab.id}>
+      {tabs.map((tab) => (
+        <Tabs.Content key={tab.id} value={tab.id}>
+          <div className="min-h-[500px] bg-white flex flex-col">
             {tab.content}
-          </Tabs.Content>
-        ))}
-      </div>
+          </div>
+        </Tabs.Content>
+      ))}
     </Tabs.Root>
   );
 }
