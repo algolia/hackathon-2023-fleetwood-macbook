@@ -17,7 +17,7 @@ const tabs: Tab[] = [
     id: 'developer',
     icon: BracesIcon,
     title: 'Developer',
-    shortDescription: 'Build cool search experiences 😎',
+    shortDescription: 'Build cool search experiences 😎 with your data.',
     content: <DeveloperView />,
   },
   {
@@ -31,7 +31,7 @@ const tabs: Tab[] = [
 
 const appId = import.meta.env.VITE_APP_ID;
 const apiKey = import.meta.env.VITE_API_KEY;
-const developerIndexName = '';
+const developerIndexName = 'FleetwoodMacBook_developer';
 const enterpriseIndexName = '';
 const ecommerceIndexName = '';
 
@@ -45,7 +45,7 @@ function App() {
       enterpriseIndexName={enterpriseIndexName}
     >
       <div className="flex w-screen h-screen justify-center items-center font-sora bg-xenon-900">
-        <div className="flex flex-col">
+        <div className="flex flex-col max-w-5xl">
           <TabContainer tabs={tabs} defaultTabId={tabs[0].id} />
         </div>
       </div>
