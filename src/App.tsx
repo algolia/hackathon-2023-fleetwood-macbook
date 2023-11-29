@@ -3,6 +3,7 @@ import { Tab, TabContainer } from './components/TabContainer';
 import { DeveloperView } from './views/DeveloperView';
 import { EcommerceView } from './views/EcommerceView';
 import { EnterpriseView } from './views/EnterpriseView';
+import { AlgoliaProvider } from './lib/AlgoliaProvider';
 
 const tabs: Tab[] = [
   {
@@ -28,13 +29,27 @@ const tabs: Tab[] = [
   },
 ];
 
+const appId = import.meta.env.VITE_APP_ID;
+const apiKey = import.meta.env.VITE_API_KEY;
+const developerIndexName = '';
+const enterpriseIndexName = '';
+const ecommerceIndexName = '';
+
 function App() {
   return (
-    <div className="flex w-screen h-screen justify-center items-center font-sora bg-xenon-900">
-      <div className="flex flex-col">
-        <TabContainer tabs={tabs} defaultTabId={tabs[0].id} />
+    <AlgoliaProvider
+      apiKey={apiKey}
+      appId={appId}
+      developerIndexName={developerIndexName}
+      ecommerceIndexName={ecommerceIndexName}
+      enterpriseIndexName={enterpriseIndexName}
+    >
+      <div className="flex w-screen h-screen justify-center items-center font-sora bg-xenon-900">
+        <div className="flex flex-col">
+          <TabContainer tabs={tabs} defaultTabId={tabs[0].id} />
+        </div>
       </div>
-    </div>
+    </AlgoliaProvider>
   );
 }
 
