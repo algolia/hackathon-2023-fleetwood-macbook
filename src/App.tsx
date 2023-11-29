@@ -10,21 +10,21 @@ const tabs: Tab[] = [
     id: 'e-commerce',
     icon: ShoppingBagIcon,
     title: 'E-commerce',
-    shortDescription: 'Help customers find your products fast',
+    shortDescription: 'Help customers find your products fast.',
     content: <EcommerceView />,
   },
   {
     id: 'developer',
     icon: BracesIcon,
     title: 'Developer',
-    shortDescription: 'Build cool search experiences 😎 with your data.',
+    shortDescription: 'Build cool 😎 search experiences  with your data.',
     content: <DeveloperView />,
   },
   {
     id: 'enterprise',
     icon: Building2Icon,
     title: 'Enterprise',
-    shortDescription: 'Work In Progress',
+    shortDescription: 'Accelerate your business with world class search. 💨',
     content: <EnterpriseView />,
   },
 ];
@@ -32,7 +32,7 @@ const tabs: Tab[] = [
 const appId = import.meta.env.VITE_APP_ID;
 const apiKey = import.meta.env.VITE_API_KEY;
 const developerIndexName = 'FleetwoodMacBook_developer';
-const enterpriseIndexName = '';
+const enterpriseIndexName = 'FleetwoodMacBook_enterprise';
 const ecommerceIndexName = '';
 
 function App() {
