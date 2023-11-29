@@ -56,7 +56,7 @@ function DeveloperViewContent() {
 
 type RecordItem = {
   objectID: string;
-  image: string;
+  poster: string;
   title: string;
   year: string;
 };
@@ -72,7 +72,7 @@ function SearchResult({ hit, onClickSearchResult }: SearchResultProps) {
       className="flex flex-col rounded-md h-52 text-sm bg-xenon-900/20 relative group hover:bg-gray-200 transition-colors"
     >
       <img
-        src={hit.image}
+        src={hit.poster}
         alt={hit.title}
         className="rounded-t-md w-full h-full object-contain object-center"
       />
