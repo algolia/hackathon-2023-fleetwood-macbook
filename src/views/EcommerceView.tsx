@@ -52,7 +52,7 @@ function HitsGridLarge() {
         <Hits hitComponent={Hit} classNames={{
             root: 'flex max-w-5xl',
             list: 'flex overflow-x-auto gap-6 px-6 snap-x scroll-px-6',
-            item: 'min-w-[32rem] flex flex-col items-start p-0 snap-start shadow-none'
+            item: 'min-w-[24rem] flex flex-col items-start p-0 snap-start shadow-none'
         }}/>
     )
 }
