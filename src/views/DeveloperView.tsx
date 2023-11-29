@@ -13,13 +13,7 @@ import ReactJson from 'react-json-view';
 export function DeveloperView() {
   const { searchClient, developerIndexName } = useAlgolia();
   return (
-    <InstantSearch
-      searchClient={searchClient}
-      indexName={developerIndexName}
-      future={{
-        preserveSharedStateOnUnmount: true,
-      }}
-    >
+    <InstantSearch searchClient={searchClient} indexName={developerIndexName}>
       <DeveloperViewContent />
       <Configure hitsPerPage={8} analytics={false} clickAnalytics={false} />
     </InstantSearch>
@@ -34,13 +28,7 @@ function DeveloperViewContent() {
     <div className="flex p-4 space-x-4 flex-1 text-gray-900">
       <div className="flex flex-1 flex-col space-y-6">
         <div className="flex flex-col space-y-2">
-          <SearchBox
-            placeholder="Try searching for Superman"
-            queryHook={(query, search) => {
-              setSelectedHit(null);
-              search(query);
-            }}
-          />
+          <SearchBox placeholder="Try searching for Superman" />
           <div className="flex justify-end">
             <Stats className="font-sora text-sm text-xenon-900" />
           </div>
