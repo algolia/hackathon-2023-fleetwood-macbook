@@ -24,7 +24,7 @@ const tabs: Tab[] = [
     id: 'enterprise',
     icon: Building2Icon,
     title: 'Enterprise',
-    shortDescription: 'Work In Progress',
+    shortDescription: 'Scale to infinity and beyond ♾️',
     content: <EnterpriseView />,
   },
 ];
