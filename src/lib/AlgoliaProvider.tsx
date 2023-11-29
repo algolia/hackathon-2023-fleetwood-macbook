@@ -5,19 +5,17 @@ import invariant from 'tiny-invariant';
 type AlgoliaContextApi = {
   searchClient: SearchClient;
   developerIndexName: string;
+  ecommerceIndexName: string;
   enterpriseIndexName: string;
 };
 
 const AlgoliaContext = createContext<AlgoliaContextApi | null>(null);
 AlgoliaContext.displayName = 'AlgoliaContext';
 
-export function useAlgoliaContext() {
+export function useAlgolia() {
   const context = useContext(AlgoliaContext);
 
-  invariant(
-    context,
-    `useAlgoliaContext() must be used within a <AlgoliaProvider/>.`,
-  );
+  invariant(context, `useAlgolia() must be used within a <AlgoliaProvider/>.`);
 
   return context;
 }
