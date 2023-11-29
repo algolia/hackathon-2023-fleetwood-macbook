@@ -1,5 +1,8 @@
 import { BracesIcon, Building2Icon, ShoppingBagIcon } from 'lucide-react';
 import { Tab, TabContainer } from './components/TabContainer';
+import { DeveloperView } from './views/DeveloperView';
+import { EcommerceView } from './views/EcommerceView';
+import { EnterpriseView } from './views/EnterpriseView';
 
 const tabs: Tab[] = [
   {
@@ -7,21 +10,21 @@ const tabs: Tab[] = [
     icon: ShoppingBagIcon,
     title: 'E-commerce',
     shortDescription: 'Help customers find your products fast',
-    content: <p>Ecommerce</p>,
+    content: <EcommerceView />,
   },
   {
     id: 'developer',
     icon: BracesIcon,
     title: 'Developer',
     shortDescription: 'Build cool search experiences 😎',
-    content: <p>Developer</p>,
+    content: <DeveloperView />,
   },
   {
     id: 'enterprise',
     icon: Building2Icon,
     title: 'Enterprise',
     shortDescription: 'Work In Progress',
-    content: <p>Enterprise</p>,
+    content: <EnterpriseView />,
   },
 ];
 
