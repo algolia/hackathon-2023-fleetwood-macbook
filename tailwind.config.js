@@ -9,6 +9,7 @@ export default {
       colors: {
         xenon: {
           500: '#1E59FF',
+          600: '#003DFF',
           700: '#022EB9',
           900: '#000033',
         },
