@@ -32,8 +32,8 @@ const tabs: Tab[] = [
 const appId = import.meta.env.VITE_APP_ID;
 const apiKey = import.meta.env.VITE_API_KEY;
 const developerIndexName = 'FleetwoodMacBook_developer';
-const enterpriseIndexName = '';
-const ecommerceIndexName = '';
+const enterpriseIndexName = 'FleetwoodMacBook_enterprise';
+const ecommerceIndexName = 'FleetwoodMacBook_ecommerce';
 
 function App() {
   return (
@@ -45,7 +45,7 @@ function App() {
       enterpriseIndexName={enterpriseIndexName}
     >
       <div className="flex w-screen h-screen justify-center items-center font-sora bg-xenon-900">
-        <div className="flex flex-col max-w-5xl">
+        <div className="flex flex-col p-4 max-w-5xl">
           <TabContainer tabs={tabs} defaultTabId={tabs[0].id} />
         </div>
       </div>
