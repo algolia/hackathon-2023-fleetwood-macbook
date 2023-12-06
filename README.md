@@ -23,4 +23,12 @@ We built our demo to showcase how Algolia is suitable for a range of customers, 
 
 ## Run the demo
 
-To run the demo, visit the [CodeSandbox](https://wl3wj9-5173.csb.app/). Alternatively, you can clone the repository and play around with the demo using your own Algolia indices!
+To run the demo, visit the [CodeSandbox](https://wl3wj9-5173.csb.app/).
+
+Alternatively, you can clone the repository and play around with the demo using your own Algolia indices!
+
+To run the demo locally, navigate to the root of the project and run:
+
+```shell
+yarn run dev
+```
